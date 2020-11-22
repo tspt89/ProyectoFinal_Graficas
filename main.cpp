@@ -11,7 +11,7 @@
 #include <math.h>
 #include <stdio.h>
 
-#include "Cube.h"
+#include "Agente.h"
 
 //Variables dimensiones de la pantalla
 int WIDTH=700;
@@ -49,8 +49,8 @@ float Direction[3] = {0.2,0.0,0.0};
 //Se aplica la formula r
 float l = 20.0f;
 
-Cube c1 (1);
-Cube c2 (1.3f);
+Agente c1 (1);
+Agente c2 (1.3f);
 
 float RadToDeg(float r)
 {
