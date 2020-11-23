@@ -12,6 +12,8 @@
 #include <stdio.h>
 
 #include "Agente.h"
+#include "Escenario.h"
+
 
 //Variables dimensiones de la pantalla
 int WIDTH=700;
@@ -51,6 +53,8 @@ float l = 20.0f;
 
 Agente c1 (1);
 Agente c2 (1.3f);
+
+Escenario *escenario = new Escenario();
 
 float RadToDeg(float r)
 {
@@ -189,12 +193,7 @@ void SpecialInput(int key, int x, int y)
 						printf("Chocando objeto!!\n");
 						return;
 					}
-                     EYE_X += Direction[0];
-                     EYE_Y += Direction[1];
-                     EYE_Z += Direction[2];
-                     CENTER_X = EYE_X + Direction[0];
-                     CENTER_Y = EYE_Y + Direction[1];
-                     CENTER_Z = EYE_Z + Direction[2];
+                     escenario->player->up();
 
                      break;
                 case GLUT_KEY_DOWN:
@@ -202,28 +201,25 @@ void SpecialInput(int key, int x, int y)
 						printf("Chocando objeto!!\n");
 						return;
 					}
-                     EYE_X -= Direction[0];
+
+					escenario->player->down();
+                    /* EYE_X -= Direction[0];
                      EYE_Y -= Direction[1];
                      EYE_Z -= Direction[2];
                      CENTER_X = EYE_X + Direction[0];
                      CENTER_Y = EYE_Y + Direction[1];
-                     CENTER_Z = EYE_Z + Direction[2];
+                     CENTER_Z = EYE_Z + Direction[2];*/
+
                      break;
                 case GLUT_KEY_LEFT:
-                     Theta -= 1.0f;
-                     Theta = (Theta < 0.0) ? 359.0 : Theta;
-                     LookAt();
+                     escenario->player->left();
                       break;
                 case GLUT_KEY_RIGHT:
-                     Theta += 1.0f;
-                     Theta = (Theta > 359.0) ? 0.0 : Theta;
-                     LookAt();
+                     escenario->player->right();
                      break;
     }
 
-    glLoadIdentity();
-    gluLookAt(EYE_X,EYE_Y,EYE_Z,CENTER_X,CENTER_Y,CENTER_Z,UP_X,UP_Y,UP_Z);
-    glutPostRedisplay();
+    escenario->player->updatePerspective();
 }
 
 //--------------------------------------------------------------------------
