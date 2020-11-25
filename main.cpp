@@ -49,7 +49,7 @@ float Direction[3] = {0.2,0.0,0.0};
 
 //Recordar que (pi/180 = r/g) donde "r" son radianes y "g" grados
 //Se aplica la formula r
-float l = 20.0f;
+float l = 50.0f;
 
 Agente c1 (1);
 Agente c2 (1.3f);
@@ -124,16 +124,18 @@ void drawAxis()
 
 void drawCubes(void)
 {
-	printf("X:%3.2f\tY:%3.2f\tZ:%3.2f\n",EYE_X,EYE_Y,EYE_Z);
+	//printf("X:%3.2f\tY:%3.2f\tZ:%3.2f\n",EYE_X,EYE_Y,EYE_Z);
 
 	drawWalls();
 
-	c1.translate(-10.0f,0,0);
+	/*c1.translate(-10.0f,0,0);
 	c1.draw();
 
 	c2.translate(5.0f,0,-1.0f);
 	c2.draw();
+	*/
 
+	escenario->update(l);
 }
 
 void init()
@@ -149,13 +151,7 @@ void init()
     glShadeModel(GL_FLAT);
 }
 
-void LookAt()
-{
-    Direction[0] = cos(DegToRad(Theta));
-    Direction[2] = sin(DegToRad(Theta));
-    CENTER_X = EYE_X + Direction[0];
-    CENTER_Z = EYE_Z + Direction[2];
-}
+
 
 int checkCollisions(){
 	int col = 1;
@@ -189,37 +185,23 @@ void SpecialInput(int key, int x, int y)
 
     switch(key){
                 case GLUT_KEY_UP:
-					if(checkCollisions() == 0){
-						printf("Chocando objeto!!\n");
-						return;
-					}
-                     escenario->player->up();
+
+                     escenario->playerUp();
 
                      break;
                 case GLUT_KEY_DOWN:
-                	if(checkCollisions() == 0){
-						printf("Chocando objeto!!\n");
-						return;
-					}
 
-					escenario->player->down();
-                    /* EYE_X -= Direction[0];
-                     EYE_Y -= Direction[1];
-                     EYE_Z -= Direction[2];
-                     CENTER_X = EYE_X + Direction[0];
-                     CENTER_Y = EYE_Y + Direction[1];
-                     CENTER_Z = EYE_Z + Direction[2];*/
-
-                     break;
+					escenario->playerDown();
+					break;
                 case GLUT_KEY_LEFT:
-                     escenario->player->left();
-                      break;
+                     escenario->playerLeft();
+                     break;
                 case GLUT_KEY_RIGHT:
-                     escenario->player->right();
+                     escenario->playerRight();
                      break;
     }
 
-    escenario->player->updatePerspective();
+    escenario->updatePlayerPerspective();
 }
 
 //--------------------------------------------------------------------------

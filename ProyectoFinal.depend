@@ -1,12 +1,13 @@
 # depslib dependency file v1.0
-1606086058 source:d:\documentos\documents\graficas\proyectofinal\src\agente.cpp
+1606285209 source:d:\documentos\documents\graficas\proyectofinal\src\agente.cpp
 	"Agente.h"
 
-1606086080 d:\documentos\documents\graficas\proyectofinal\include\agente.h
+1606250766 d:\documentos\documents\graficas\proyectofinal\include\agente.h
 	<GL/glut.h>
 	<math.h>
 	<stdio.h>
 	<unistd.h>
+	<cstdlib>
 
 1597696949 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\gl\glut.h
 	"freeglut_std.h"
@@ -930,7 +931,7 @@
 
 1526089820 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\pthread_unistd.h
 
-1606093745 source:d:\documentos\documents\graficas\proyectofinal\main.cpp
+1606284387 source:d:\documentos\documents\graficas\proyectofinal\main.cpp
 	<GLUT/glut.h>
 	<GL/glut.h>
 	<stdlib.h>
@@ -939,16 +940,48 @@
 	"Agente.h"
 	"Escenario.h"
 
-1606093085 source:d:\documentos\documents\graficas\proyectofinal\src\escenario.cpp
+1606284484 source:d:\documentos\documents\graficas\proyectofinal\src\escenario.cpp
 	"Escenario.h"
+	<stdio.h>
 
-1606093264 d:\documentos\documents\graficas\proyectofinal\include\escenario.h
+1606250793 d:\documentos\documents\graficas\proyectofinal\include\escenario.h
+	"Player.h"
+	"Collision.h"
+	"Agente.h"
+	"Cara.h"
+
+1606246880 source:d:\documentos\documents\graficas\proyectofinal\src\player.cpp
 	"Player.h"
 
-1606093490 source:d:\documentos\documents\graficas\proyectofinal\src\player.cpp
-	"Player.h"
-
-1606093264 d:\documentos\documents\graficas\proyectofinal\include\player.h
+1606100275 d:\documentos\documents\graficas\proyectofinal\include\player.h
 	<math.h>
+	<GL/glut.h>
+
+1606285311 source:d:\documentos\documents\graficas\proyectofinal\src\collision.cpp
+	"Collision.h"
+
+1606244142 d:\documentos\documents\graficas\proyectofinal\include\collision.h
+	<stdio.h>
+	<math.h>
+	<unistd.h>
+
+1606237606 source:d:\documentos\documents\graficas\proyectofinal\src\rgbimage.cpp
+	"RgbImage.h"
+	<windows.h>
+	"GL/gl.h"
+
+1606237596 d:\documentos\documents\graficas\proyectofinal\include\rgbimage.h
+	<stdio.h>
+	<assert.h>
+
+1526089814 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\assert.h
+	<crtdefs.h>
+	<stdlib.h>
+
+1606251562 source:d:\documentos\documents\graficas\proyectofinal\src\cara.cpp
+	"Cara.h"
+
+1606242625 d:\documentos\documents\graficas\proyectofinal\include\cara.h
+	"Agente.h"
 	<GL/glut.h>
 

@@ -2,15 +2,17 @@
 
 Player::Player()
 {
-	this->EYE_X=0.0;
-	this->EYE_Y=1.0;
-	this->EYE_Z=0.0;
-	this->CENTER_X=1;
-	this->CENTER_Y=0;
-	this->CENTER_Z=0;
-	this->UP_X=0;
-	this->UP_Y=1;
-	this->UP_Z=0;
+	EYE_X=0.0;
+    EYE_Y=0.0;
+    EYE_Z=0.0;
+    CENTER_X=1;
+    CENTER_Y=0;
+    CENTER_Z=0;
+    RadP = 1;
+    UP_X=0;
+    UP_Y=1;
+    UP_Z=0;
+    Theta = 0;
 }
 
 Player::~Player()
@@ -37,13 +39,13 @@ void Player::down(){
 }
 
 void Player::right(){
-	Theta += 1.0f;
+	Theta += 1.5f;
 	Theta = (Theta > 359.0) ? 0.0 : Theta;
 	this->lookAt();
 }
 
 void Player::left(){
-	Theta -= 1.0f;
+	Theta -= 1.5f;
 	Theta = (Theta < 0.0) ? 359.0 : Theta;
 	this->lookAt();
 }
@@ -65,3 +67,5 @@ void Player::updatePerspective(){
     gluLookAt(EYE_X,EYE_Y,EYE_Z,CENTER_X,CENTER_Y,CENTER_Z,UP_X,UP_Y,UP_Z);
     glutPostRedisplay();
 }
+
+

@@ -8,6 +8,12 @@ class Player
 	public:
 		Player();
 		virtual ~Player();
+		float EYE_X=0.0;
+		float EYE_Y=1.0;
+		float EYE_Z=0.0;
+		float CENTER_X=1;
+		float CENTER_Y=0;
+		float CENTER_Z=0;
 
 		void up();
 		void down();
@@ -15,11 +21,11 @@ class Player
 		void right();
 		void lookAt();
 		void updatePerspective();
+
 	protected:
 
 	private:
-		float EYE_X, EYE_Y, EYE_Z;
-		float CENTER_X, CENTER_Y, CENTER_Z;
+
 		float UP_X, UP_Y, UP_Z;
 		float RadP;
 		float Direction[3] = {1.0,0.0,0.0};
