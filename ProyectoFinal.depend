@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1606285209 source:d:\documentos\documents\graficas\proyectofinal\src\agente.cpp
+1606369398 source:d:\documentos\documents\graficas\proyectofinal\src\agente.cpp
 	"Agente.h"
 
 1606250766 d:\documentos\documents\graficas\proyectofinal\include\agente.h
@@ -931,7 +931,7 @@
 
 1526089820 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\pthread_unistd.h
 
-1606284387 source:d:\documentos\documents\graficas\proyectofinal\main.cpp
+1606369498 source:d:\documentos\documents\graficas\proyectofinal\main.cpp
 	<GLUT/glut.h>
 	<GL/glut.h>
 	<stdlib.h>
@@ -940,24 +940,25 @@
 	"Agente.h"
 	"Escenario.h"
 
-1606284484 source:d:\documentos\documents\graficas\proyectofinal\src\escenario.cpp
+1606369870 source:d:\documentos\documents\graficas\proyectofinal\src\escenario.cpp
 	"Escenario.h"
 	<stdio.h>
 
-1606250793 d:\documentos\documents\graficas\proyectofinal\include\escenario.h
+1606368980 d:\documentos\documents\graficas\proyectofinal\include\escenario.h
 	"Player.h"
 	"Collision.h"
 	"Agente.h"
 	"Cara.h"
+	"Walls.h"
 
-1606246880 source:d:\documentos\documents\graficas\proyectofinal\src\player.cpp
+1606369180 source:d:\documentos\documents\graficas\proyectofinal\src\player.cpp
 	"Player.h"
 
 1606100275 d:\documentos\documents\graficas\proyectofinal\include\player.h
 	<math.h>
 	<GL/glut.h>
 
-1606285311 source:d:\documentos\documents\graficas\proyectofinal\src\collision.cpp
+1606285485 source:d:\documentos\documents\graficas\proyectofinal\src\collision.cpp
 	"Collision.h"
 
 1606244142 d:\documentos\documents\graficas\proyectofinal\include\collision.h
@@ -984,4 +985,11 @@
 1606242625 d:\documentos\documents\graficas\proyectofinal\include\cara.h
 	"Agente.h"
 	<GL/glut.h>
+
+1606368896 d:\documentos\documents\graficas\proyectofinal\include\walls.h
+	<GL/glut.h>
+	"RgbImage.h"
+
+1606370500 source:d:\documentos\documents\graficas\proyectofinal\src\walls.cpp
+	"Walls.h"
 

@@ -39,13 +39,13 @@ void Player::down(){
 }
 
 void Player::right(){
-	Theta += 1.5f;
+	Theta += 2.0f;
 	Theta = (Theta > 359.0) ? 0.0 : Theta;
 	this->lookAt();
 }
 
 void Player::left(){
-	Theta -= 1.5f;
+	Theta -= 2.0f;
 	Theta = (Theta < 0.0) ? 359.0 : Theta;
 	this->lookAt();
 }

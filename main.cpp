@@ -126,7 +126,7 @@ void drawCubes(void)
 {
 	//printf("X:%3.2f\tY:%3.2f\tZ:%3.2f\n",EYE_X,EYE_Y,EYE_Z);
 
-	drawWalls();
+	//drawWalls();
 
 	/*c1.translate(-10.0f,0,0);
 	c1.draw();

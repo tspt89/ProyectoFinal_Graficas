@@ -5,6 +5,7 @@
 #include "Collision.h"
 #include "Agente.h"
 #include "Cara.h"
+#include "Walls.h"
 
 class Escenario
 {
@@ -31,6 +32,7 @@ class Escenario
 		Collision *c;
 		static const int tam = 2;
 		Agente *a[tam];
+		Walls *wall;
 
 };
 

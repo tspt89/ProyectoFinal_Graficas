@@ -3,7 +3,7 @@
 Agente::Agente(float s)
 {
 	this->size = s;
-	this->radius = sqrt(pow(s,2) + pow(s/2,2));
+	this->radius = sqrt(pow(s,2) + pow(s,2));
 	this->Theta = 0;
 }
 
@@ -22,7 +22,6 @@ void Agente::draw(){
 }
 
 int Agente::getDistance(float x, float y, float z){
-	float radius = sqrt(pow(this->size,2) + pow(this->size/2,2));
 	float distance = sqrt(pow((x-this->x),2) + pow((z-this->z),2));
 	printf("RADIUS AGENTE: %f (r = %f)\tX: %3.2f\tY: %3.2f\tZ: %3.2f\tDistance:%3.2f\n",this->radius,size,x,y,z,distance);
 	printf("AGENTE: %3.2f, %3.2f, %3.2f - Theta: %3.2f\n",this->x,this->y,this->z,this->Theta);
@@ -43,7 +42,7 @@ float Agente::getRadius(){
 
 void Agente::update(float l){
 	if(c == 0){
-		Theta = rand() % 100;
+		//Theta = rand() % 100;
 		c = rand() % 5;
 	} else if(c == 1){
 		this->x += this->dx;
