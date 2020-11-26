@@ -10,7 +10,7 @@
 class Escenario
 {
 	public:
-		Escenario();
+		Escenario(float);
 		virtual ~Escenario();
 
 		//Escenario Funcions
@@ -33,6 +33,7 @@ class Escenario
 		static const int tam = 2;
 		Agente *a[tam];
 		Walls *wall;
+		float l = 0.0f;
 
 };
 

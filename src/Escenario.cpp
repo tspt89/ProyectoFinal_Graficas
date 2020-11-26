@@ -2,15 +2,16 @@
 
 #include <stdio.h>
 
-Escenario::Escenario()
+Escenario::Escenario(float _l)
 {
+	this->l = _l;
 	this->player = new Player();
 
 	this->a[0] = new Cara();
 	this->a[1] = new Agente(0.5);
 	//this->a[1]->translate(10.0f,0,0);
 
-	this->wall = new Walls(50.0f);
+	this->wall = new Walls(_l);
 }
 
 Escenario::~Escenario()
@@ -43,13 +44,13 @@ void Escenario::updatePlayerPerspective(){
 }
 
 void Escenario::update(float l){
-	printf("Player - %3.2f, %3.2f, %3.2f\n",this->player->CENTER_X,this->player->CENTER_Y,this->player->CENTER_Z);
+	//printf("Player - %3.2f, %3.2f, %3.2f\n",this->player->CENTER_X,this->player->CENTER_Y,this->player->CENTER_Z);
 	for(int i=0; i < tam; i++){
 		a[i]->update(l);
 		a[i]->draw();
 	}
 	wall->draw();
-	usleep(100000);
+	//usleep(100000);
 
 }
 
@@ -60,10 +61,14 @@ bool Escenario::checkCollisions(){
 	for(int i=0; i < tam; i++){
 		printf("Agente %d\n:",i);
 		isColliding = c->isColliding(player->CENTER_X,player->CENTER_Z,a[i]->x,a[i]->z,a[i]->getRadius());
-		int rad = a[i]->getDistance(player->CENTER_X,player->CENTER_Y,player->CENTER_Z);
+		//int rad = a[i]->getDistance(player->CENTER_X,player->CENTER_Y,player->CENTER_Z);
 		if(isColliding)
 			break;
 	}
+	printf("EYE X: %3.2f, %3.2f, %3.2f\n",player->EYE_X,player->EYE_Y,player->EYE_Z);
+	c->isCollidingWall(&player->EYE_X,&player->EYE_Y,&player->EYE_Z,this->l);
+	this->updatePlayerPerspective();
+	printf("AFTER X: %3.2f, %3.2f, %3.2f\n",player->EYE_X,player->EYE_Y,player->EYE_Z);
 	//usleep(750000);
 	printf("Object is colliding: %s\n",(isColliding)?"true":"false");
 	return isColliding;

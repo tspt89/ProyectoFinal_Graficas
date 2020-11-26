@@ -178,7 +178,7 @@ void Cara::drawContorno(void)
 }
 
 void Cara::update(float l){
-	printf("Cara -> X= %3.2f\tY= %3.2f\tZ= %3.2f\n",this->x,this->y,this->z);
+	//printf("Cara -> X= %3.2f\tY= %3.2f\tZ= %3.2f\n",this->x,this->y,this->z);
 	usleep(1000);
 	this->Agente::update(l);
 	this->drawContorno();

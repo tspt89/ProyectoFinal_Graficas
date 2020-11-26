@@ -3,6 +3,7 @@
 Walls::Walls(float _l)
 {
 	this->l = _l;
+	this->h = _l * 0.4;
 }
 
 Walls::~Walls()
@@ -34,22 +35,21 @@ void Walls::loadTextureFromFile(char *filename)
 }
 
 void Walls::draw(){
-	printf("Drawing walls\n");
 	//Derecha
     filename = "SNESSIDES.bmp";
     loadTextureFromFile( filename );
     glEnable(GL_TEXTURE_2D);
     glBindTexture(GL_TEXTURE_2D, texture[0]);
-    glColor3f(0.5f,0.2f,0.5f);
+    //glColor3f(0.5f,0.2f,0.5f);
 	glBegin(GL_QUADS);
 	glTexCoord2f(0.0, 0.0);
 	glVertex3f(-l,-2,l);
     glTexCoord2f(0.0, 1.0);
 	glVertex3f(l,-2,l);
 	glTexCoord2f(1.0, 1.0);
-	glVertex3f(l,2,l);
+	glVertex3f(l,h,l);
 	glTexCoord2f(1.0,0.0);
-	glVertex3f(-l,2,l);
+	glVertex3f(-l,h,l);
 	glEnd();
 	glDisable(GL_TEXTURE_2D);
 
@@ -65,9 +65,9 @@ void Walls::draw(){
 	glTexCoord2f(0.0, 1.0);
 	glVertex3f(l,-2,-l);
 	glTexCoord2f(1.0, 1.0);
-	glVertex3f(l,2,-l);
+	glVertex3f(l,h,-l);
 	glTexCoord2f(1.0,0.0);
-	glVertex3f(-l,2,-l);
+	glVertex3f(-l,h,-l);
 	glEnd();
 	glDisable(GL_TEXTURE_2D);
 
@@ -77,15 +77,15 @@ void Walls::draw(){
     glEnable(GL_TEXTURE_2D);
     glBindTexture(GL_TEXTURE_2D, texture[0]);
 	glBegin(GL_QUADS);
-	glColor3f(0.5f,0.2f,0.5f);
+	//glColor3f(0.5f,0.2f,0.5f);
 	glTexCoord2f(0.0, 0.0);
-	glVertex3f(l,2,l);
+	glVertex3f(l,h,l);
 	glTexCoord2f(0.0, 1.0);
 	glVertex3f(l,-2,l);
 	glTexCoord2f(1.0, 1.0);
 	glVertex3f(l,-2,-l);
 	glTexCoord2f(1.0,0.0);
-	glVertex3f(l,2,-l);
+	glVertex3f(l,h,-l);
 	glEnd();
 	glDisable(GL_TEXTURE_2D);
 
@@ -97,13 +97,31 @@ void Walls::draw(){
 	glBegin(GL_QUADS);
 	glColor3f(0.5f,0.2f,0.5f);
 	glTexCoord2f(0.0, 0.0);
-	glVertex3f(-l,2,l);
+	glVertex3f(-l,h,l);
 	glTexCoord2f(0.0, 1.0);
 	glVertex3f(-l,-2,l);
 	glTexCoord2f(1.0, 1.0);
 	glVertex3f(-l,-2,-l);
 	glTexCoord2f(1.0,0.0);
-	glVertex3f(-l,2,-l);
+	glVertex3f(-l,h,-l);
+	glEnd();
+	glDisable(GL_TEXTURE_2D);
+
+	//Piso
+	filename = "textura4.bmp";
+    loadTextureFromFile( filename );
+    glEnable(GL_TEXTURE_2D);
+    glBindTexture(GL_TEXTURE_2D, texture[0]);
+	glBegin(GL_QUADS);
+	glColor3f(0.65f,0.34f,0.34f);
+	glTexCoord2f(0.0, 0.0);
+	glVertex3f(l,-1,-l);
+	glTexCoord2f(0.0, 1.0);
+	glVertex3f(l,-1,l);
+	glTexCoord2f(1.0, 1.0);
+	glVertex3f(-l,0,l);
+	glTexCoord2f(1.0,0.0);
+	glVertex3f(-l,0,-l);
 	glEnd();
 	glDisable(GL_TEXTURE_2D);
 }

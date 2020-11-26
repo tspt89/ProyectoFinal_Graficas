@@ -19,3 +19,16 @@ bool Collision::isColliding(float pX, float pZ, float aX, float aZ, float radius
 	//usleep(1000000);
 	return (distance <= radius);
 }
+
+bool Collision::isCollidingWall(float *pX, float *pY, float *pZ, float l){
+	bool var = false;
+	var = ((*pX > l) || (*pZ > l) || (*pX<= -l) || (*pZ<= -l));
+	*pX= (*pX > l)? l - (0.05f * l) : *pX;
+	*pZ= (*pZ > l)? l - (0.05f * l) : *pZ;
+	*pX= (*pX<= -l) ? -l + (0.05f * l): *pX;
+	*pZ= (*pZ<= -l) ? -l + (0.05f * l): *pZ;
+
+	//printf("---- %3.2f - %3.2f - %3.2f\t\t\tIs colliding with walls: %s\n",*pX,*pY,*pZ,(var)?"true":"false");
+	//usleep(300000);
+	return var;
+}

@@ -10,6 +10,7 @@ class Collision
 		Collision();
 		virtual ~Collision();
 		bool isColliding(float,float,float,float,float);
+		bool isCollidingWall(float*,float*,float*,float);
 	protected:
 
 	private:

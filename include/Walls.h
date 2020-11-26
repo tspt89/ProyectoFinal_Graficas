@@ -12,7 +12,7 @@ class Walls
 		Walls(float);
 		virtual ~Walls();
 
-		float l = 0.0f;
+		float l = 0.0f, h = 0.0f;
 		char* filename = "RedLeavesTexture.bmp";
 		GLuint	texture[NTextures];
 
