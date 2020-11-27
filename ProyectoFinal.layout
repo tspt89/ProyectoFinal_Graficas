@@ -2,19 +2,95 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
+	<File name="main.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="4" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1381" topLine="63" />
+		</Cursor>
+		<Folding>
+			<Collapse line="63" />
+		</Folding>
+	</File>
+	<File name="include\CuboTexturizado.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="492" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\Nave.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="6" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1629" topLine="56" />
+		</Cursor>
+	</File>
 	<File name="src\RgbImage.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="0" topLine="302" />
+			<Cursor1 position="9946" topLine="301" />
+		</Cursor>
+	</File>
+	<File name="include\Escenario.h" open="0" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="219" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\Nave.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="236" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\Agente.h" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="12" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="630" topLine="7" />
 		</Cursor>
 	</File>
 	<File name="include\Player.h" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="245" topLine="0" />
+			<Cursor1 position="508" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\Cara.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3903" topLine="114" />
+		</Cursor>
+		<Folding>
+			<Collapse line="31" />
+			<Collapse line="38" />
+			<Collapse line="44" />
+			<Collapse line="49" />
+			<Collapse line="54" />
+			<Collapse line="59" />
+			<Collapse line="64" />
+			<Collapse line="69" />
+			<Collapse line="74" />
+			<Collapse line="79" />
+			<Collapse line="84" />
+		</Folding>
+	</File>
+	<File name="src\Agente.cpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="6" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2491" topLine="72" />
+		</Cursor>
+	</File>
+	<File name="src\Mountain.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="10" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="302" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\CuboTexturizado.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1742" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="src\Walls.cpp" open="0" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="6" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="2939" topLine="0" />
+			<Cursor1 position="2296" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\Escenario.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="7" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2360" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\Player.cpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="2" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="827" topLine="19" />
 		</Cursor>
 	</File>
 	<File name="include\Walls.h" open="0" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -22,57 +98,19 @@
 			<Cursor1 position="198" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="include\Agente.h" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="275" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\Cara.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="4329" topLine="153" />
-		</Cursor>
-	</File>
-	<File name="main.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="4" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="5958" topLine="118" />
-		</Cursor>
-		<Folding>
-			<Collapse line="63" />
-		</Folding>
-	</File>
-	<File name="src\Agente.cpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="422" topLine="0" />
-		</Cursor>
-	</File>
 	<File name="include\Cara.h" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="6" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="104" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\Player.cpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="2" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="68" topLine="22" />
+			<Cursor1 position="189" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="src\Collision.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="3" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1238" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\Escenario.h" open="0" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="619" topLine="0" />
+			<Cursor1 position="572" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="include\Collision.h" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="4" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="256" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\Escenario.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="7" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1686" topLine="0" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

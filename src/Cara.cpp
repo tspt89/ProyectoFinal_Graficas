@@ -88,7 +88,7 @@ int elementArrayNarz[10] = {
 };
 
 
-Cara::Cara() : Agente(2.0f)
+Cara::Cara() : Agente(3.0f)
 {
 	//ctor
 }

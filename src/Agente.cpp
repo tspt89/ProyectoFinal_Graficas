@@ -41,9 +41,21 @@ float Agente::getRadius(){
 }
 
 void Agente::update(float l){
-	if(c == 0){
-		//Theta = rand() % 100;
-		c = rand() % 5;
+	int lastC = this->c;
+	if(c == 0 || stepCounter == limitSteps){
+		//if(stepCounter == limitSteps)
+		//	printf("STEP COUNTER LIMIT IS REACHED\n");
+		stepCounter = 0;
+		limitSteps = rand() % (int)(l/2) + 10;
+		//printf("LIMIT STEPS: %d\t\t",limitSteps);
+		this->c = rand() % 5;
+		if(lastC == c)
+			this->c = rand() % 5;
+		this->dx = static_cast <float> (rand()) / static_cast <float> (RAND_MAX);
+		this->dy = static_cast <float> (rand()) / static_cast <float> (RAND_MAX);
+		//printf("dX:%3.2f\tdy: %3.2f\tC = %d\n",this->dx,this->dy,this->c);
+
+		//sleep(2);
 	} else if(c == 1){
 		this->x += this->dx;
 		this->z += this->dz;
@@ -58,19 +70,40 @@ void Agente::update(float l){
 		this->z += this->dz;
 	}
 
-
-	//printf("Agente: %4d\tX: %3.2f - Y: %3.2f\n",this->c,this->x,this->z);
+	stepCounter++;
 	reset(l);
 }
 
 void Agente::reset(float l){
-	if(x >= l || z >= l || x <= -l || z <= -l){
-		printf("Before %3.2f %3.2f\t\t",this->x,this->z);
+	if(x >= l || z >= l){
+		/*printf("Before %3.2f %3.2f\t\t",this->x,this->z);
 		float sign1 = pow(-1,rand()%10) * (rand() % (int)(l - 0.1*l));
 		float sign2 = pow(-1,rand()%10) * (rand() % (int)(l - 0.1*l));
 		this->translate(sign1,0,sign2);
-		printf("Update %3.2f %3.2f\n",this->x,this->z);
-		c = 0;
+		printf("Update %3.2f %3.2f\n",this->x,this->z);*/
+		//printf("Enter if 1: + \tx= %3.2f z=%3.2f\n",x,z);
+		stepCounter = 0;
+		c = 2;
 
+	} else if(x <= -l || z <= -l){
+		//printf("Enter if 2: - \tx= %3.2f z=%3.2f\n",x,z);
+		stepCounter = 0;
+		c = 1;
 	}
+}
+
+void Agente::changeDirection(float l){
+	printf("-->-->-->\tChanging direction!!\n");
+	int lastC = this->c;
+	if(stepCounter == limitSteps)
+		//printf("STEP COUNTER LIMIT IS REACHED\n");
+	stepCounter = 0;
+	limitSteps = rand() % (int)(l/2) + 10;
+	//printf("LIMIT STEPS: %d\t\t",limitSteps);
+	this->c = rand() % 5;
+	if(lastC == c)
+		this->c = rand() % 5;
+
+	this->dx = static_cast <float> (rand()) / static_cast <float> (RAND_MAX);
+	this->dy = static_cast <float> (rand()) / static_cast <float> (RAND_MAX);
 }

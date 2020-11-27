@@ -49,7 +49,10 @@
 		<Unit filename="include/Agente.h" />
 		<Unit filename="include/Cara.h" />
 		<Unit filename="include/Collision.h" />
+		<Unit filename="include/CuboTexturizado.h" />
 		<Unit filename="include/Escenario.h" />
+		<Unit filename="include/Mountain.h" />
+		<Unit filename="include/Nave.h" />
 		<Unit filename="include/Player.h" />
 		<Unit filename="include/RgbImage.h" />
 		<Unit filename="include/Walls.h" />
@@ -57,7 +60,10 @@
 		<Unit filename="src/Agente.cpp" />
 		<Unit filename="src/Cara.cpp" />
 		<Unit filename="src/Collision.cpp" />
+		<Unit filename="src/CuboTexturizado.cpp" />
 		<Unit filename="src/Escenario.cpp" />
+		<Unit filename="src/Mountain.cpp" />
+		<Unit filename="src/Nave.cpp" />
 		<Unit filename="src/Player.cpp" />
 		<Unit filename="src/RgbImage.cpp" />
 		<Unit filename="src/Walls.cpp" />

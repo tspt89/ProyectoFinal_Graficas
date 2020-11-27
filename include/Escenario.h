@@ -7,6 +7,8 @@
 #include "Cara.h"
 #include "Walls.h"
 #include "CuboTexturizado.h"
+#include "Nave.h"
+#include "Mountain.h"
 
 class Escenario
 {
@@ -31,7 +33,7 @@ class Escenario
 	private:
 		Player *player;
 		Collision *c;
-		static const int tam = 3;
+		static const int tam = 4;
 		Agente *a[tam];
 		Walls *wall;
 		float l = 0.0f;

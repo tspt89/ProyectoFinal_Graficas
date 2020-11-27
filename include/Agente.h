@@ -16,7 +16,7 @@ class Agente
 		float Ax,Ay,Az, Theta = 0.0f;
 		float 	x = 0.0f,y = 0.0f,z = 0.0f;
 		float size = 1.0f, radius = 0.0f;
-		int c = 0;
+		int c = 0, stepCounter = 0, limitSteps = 0;
 
 		int getDistance(float, float, float);
 		void translate(float, float, float);
@@ -24,6 +24,7 @@ class Agente
 		float getRadius();
 		virtual void update(float);
 		virtual void draw();
+		void changeDirection(float l);
 	protected:
 
 	private:
