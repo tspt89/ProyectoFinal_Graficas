@@ -13,7 +13,8 @@ float vertexCoordsBoca[15] = {
 		-1.0,-0.5, 0.3,     0.0, 0.0, 0.3,  //p00, p01
 		 1.0,-0.5, 0.3,     0.0,-1.5, 0.3,  //p02, p03
 		 0.0,-0.2, 0.7                      //p04
-	};
+};
+
 float vertexCoordsOjoI[18] = {
 	//Ojo izq 18
 	-1.8, 2.5, 0.1,    -1.2, 3.0, 0.3,  //p13, p14
@@ -179,9 +180,8 @@ void Cara::drawContorno(void)
 
 void Cara::update(float l){
 	//printf("Cara -> X= %3.2f\tY= %3.2f\tZ= %3.2f\n",this->x,this->y,this->z);
-	usleep(1000);
+	//usleep(1000);
 	this->Agente::update(l);
-	this->drawContorno();
 }
 
 void Cara::draw(){

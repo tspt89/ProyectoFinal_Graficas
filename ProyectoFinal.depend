@@ -2,7 +2,7 @@
 1606369398 source:d:\documentos\documents\graficas\proyectofinal\src\agente.cpp
 	"Agente.h"
 
-1606250766 d:\documentos\documents\graficas\proyectofinal\include\agente.h
+1606444935 d:\documentos\documents\graficas\proyectofinal\include\agente.h
 	<GL/glut.h>
 	<math.h>
 	<stdio.h>
@@ -931,7 +931,7 @@
 
 1526089820 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\pthread_unistd.h
 
-1606417867 source:d:\documentos\documents\graficas\proyectofinal\main.cpp
+1606490445 source:d:\documentos\documents\graficas\proyectofinal\main.cpp
 	<GLUT/glut.h>
 	<GL/glut.h>
 	<stdlib.h>
@@ -940,21 +940,22 @@
 	"Agente.h"
 	"Escenario.h"
 
-1606420989 source:d:\documentos\documents\graficas\proyectofinal\src\escenario.cpp
+1606490831 source:d:\documentos\documents\graficas\proyectofinal\src\escenario.cpp
 	"Escenario.h"
 	<stdio.h>
 
-1606420559 d:\documentos\documents\graficas\proyectofinal\include\escenario.h
+1606446855 d:\documentos\documents\graficas\proyectofinal\include\escenario.h
 	"Player.h"
 	"Collision.h"
 	"Agente.h"
 	"Cara.h"
 	"Walls.h"
+	"CuboTexturizado.h"
 
-1606410935 source:d:\documentos\documents\graficas\proyectofinal\src\player.cpp
+1606489688 source:d:\documentos\documents\graficas\proyectofinal\src\player.cpp
 	"Player.h"
 
-1606100275 d:\documentos\documents\graficas\proyectofinal\include\player.h
+1606491081 d:\documentos\documents\graficas\proyectofinal\include\player.h
 	<math.h>
 	<GL/glut.h>
 
@@ -979,7 +980,7 @@
 	<crtdefs.h>
 	<stdlib.h>
 
-1606420732 source:d:\documentos\documents\graficas\proyectofinal\src\cara.cpp
+1606491004 source:d:\documentos\documents\graficas\proyectofinal\src\cara.cpp
 	"Cara.h"
 
 1606242625 d:\documentos\documents\graficas\proyectofinal\include\cara.h
@@ -990,6 +991,14 @@
 	<GL/glut.h>
 	"RgbImage.h"
 
-1606419188 source:d:\documentos\documents\graficas\proyectofinal\src\walls.cpp
+1606490865 source:d:\documentos\documents\graficas\proyectofinal\src\walls.cpp
 	"Walls.h"
+
+1606491004 source:d:\documentos\documents\graficas\proyectofinal\src\cubotexturizado.cpp
+	"CuboTexturizado.h"
+
+1606446862 d:\documentos\documents\graficas\proyectofinal\include\cubotexturizado.h
+	"Agente.h"
+	"RgbImage.h"
+	<GL/glut.h>
 

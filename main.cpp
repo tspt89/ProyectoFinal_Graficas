@@ -53,7 +53,7 @@ float Direction[3] = {0.2,0.0,0.0};
 
 //Recordar que (pi/180 = r/g) donde "r" son radianes y "g" grados
 //Se aplica la formula r
-float l = 50.0f;
+float l = 40.0f;
 
 Agente c1 (1);
 Agente c2 (1.3f);

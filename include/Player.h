@@ -29,7 +29,7 @@ class Player
 		float UP_X, UP_Y, UP_Z;
 		float RadP;
 		float Direction[3] = {1.0,0.0,0.0};
-		float Theta;
+		float Theta, dTheta;
 
 		float DegToRad(float);
 };

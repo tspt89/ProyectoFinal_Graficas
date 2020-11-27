@@ -13,6 +13,7 @@ Player::Player()
     UP_Y=1;
     UP_Z=0;
     Theta = 0;
+    dTheta = 4.0f;
 }
 
 Player::~Player()
@@ -39,13 +40,13 @@ void Player::down(){
 }
 
 void Player::right(){
-	Theta += 2.0f;
+	Theta += dTheta;
 	Theta = (Theta > 359.0) ? 0.0 : Theta;
 	this->lookAt();
 }
 
 void Player::left(){
-	Theta -= 2.0f;
+	Theta -= dTheta;
 	Theta = (Theta < 0.0) ? 359.0 : Theta;
 	this->lookAt();
 }

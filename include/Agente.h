@@ -13,7 +13,7 @@ class Agente
 		Agente(float);
 		virtual ~Agente();
 		float dx = 0.1f, dy = 0.1f, dz = 0.1f;
-		float Ax,Ay,Az, Theta;
+		float Ax,Ay,Az, Theta = 0.0f;
 		float 	x = 0.0f,y = 0.0f,z = 0.0f;
 		float size = 1.0f, radius = 0.0f;
 		int c = 0;
