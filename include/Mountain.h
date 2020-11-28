@@ -2,13 +2,15 @@
 #define MOUNTAIN_H
 
 #include "Agente.h"
+#include "RgbImage.h"
 #include <GL/glut.h>
+#define NTextures 2
 
 
 class Mountain: public Agente
 {
 	public:
-		Mountain(float, float);
+		Mountain(float, float, char *);
 		virtual ~Mountain();
 		float base, height;
 
@@ -17,6 +19,10 @@ class Mountain: public Agente
 	protected:
 
 	private:
+	    void loadTextureFromFile(char *);
+		char *texture_1,*texture_2,*texture_3;
+		GLUquadric *quad;
+		GLuint	texture[NTextures];
 };
 
 #endif // MOUNTAIN_H

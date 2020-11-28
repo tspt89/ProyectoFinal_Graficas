@@ -940,7 +940,7 @@
 	"Agente.h"
 	"Escenario.h"
 
-1606512903 source:d:\documentos\documents\graficas\proyectofinal\src\escenario.cpp
+1606594448 source:d:\documentos\documents\graficas\proyectofinal\src\escenario.cpp
 	"Escenario.h"
 	<stdio.h>
 
@@ -993,7 +993,7 @@
 	<GL/glut.h>
 	"RgbImage.h"
 
-1606490865 source:d:\documentos\documents\graficas\proyectofinal\src\walls.cpp
+1606594542 source:d:\documentos\documents\graficas\proyectofinal\src\walls.cpp
 	"Walls.h"
 
 1606491004 source:d:\documentos\documents\graficas\proyectofinal\src\cubotexturizado.cpp
@@ -1010,10 +1010,11 @@
 1606509686 d:\documentos\documents\graficas\proyectofinal\include\nave.h
 	"Agente.h"
 
-1606513078 source:d:\documentos\documents\graficas\proyectofinal\src\mountain.cpp
+1606594373 source:d:\documentos\documents\graficas\proyectofinal\src\mountain.cpp
 	"Mountain.h"
 
-1606512672 d:\documentos\documents\graficas\proyectofinal\include\mountain.h
+1606594407 d:\documentos\documents\graficas\proyectofinal\include\mountain.h
 	"Agente.h"
+	"RgbImage.h"
 	<GL/glut.h>
 

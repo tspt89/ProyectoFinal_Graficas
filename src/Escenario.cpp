@@ -15,7 +15,8 @@ Escenario::Escenario(float _l)
 	this->a[2]->translate(10.0f,0,0);
 
 	//this->a[3] = new Nave(10.0f);
-	this->a[3] = new Mountain(2.0f,5.0f);
+	char * tM = "SNES.bmp";
+	this->a[3] = new Mountain(2.0f,5.0f,tM);
 	this->a[3]->translate(10.0f,0.0f,3.0f);
 	this->wall = new Walls(_l);
 }
