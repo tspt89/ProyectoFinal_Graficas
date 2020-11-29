@@ -1005,13 +1005,13 @@
 	"RgbImage.h"
 	<GL/glut.h>
 
-1606622762 source:d:\documentos\documents\graficas\proyectofinal\src\nave.cpp
+1606678636 source:d:\documentos\documents\graficas\proyectofinal\src\nave.cpp
 	"Nave.h"
 
-1606621238 d:\documentos\documents\graficas\proyectofinal\include\nave.h
+1606678636 d:\documentos\documents\graficas\proyectofinal\include\nave.h
 	"Agente.h"
 
-1606621871 source:d:\documentos\documents\graficas\proyectofinal\src\mountain.cpp
+1606678388 source:d:\documentos\documents\graficas\proyectofinal\src\mountain.cpp
 	"Mountain.h"
 
 1606678387 d:\documentos\documents\graficas\proyectofinal\include\mountain.h

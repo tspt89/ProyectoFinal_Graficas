@@ -1,5 +1,6 @@
 #include "Nave.h"
 
+//Vertices de la Nave
 float vertexCoordsShip[18] = {
     //Ship Center
      0.0, 0.0, 0.0,    0.5, 0.0,-1.0,
@@ -28,6 +29,7 @@ int elementArrayShip[44] = {
     5,1,    1,2,    2,5,
 };
 
+//Constructor recibe el tamanio de la nave para asignarselo a la clase padre
 Nave::Nave(float l) : Agente(l)
 {
 	//ctor
@@ -38,17 +40,18 @@ Nave::~Nave()
 	//dtor
 }
 
+//Actualizacion de variables de control
 void Nave::update(float l){
 	Agente::update(l);
 }
 
+//Se dibuja la nave
 void Nave::draw(){
 	this->drawContorno();
 }
 
 void Nave::drawWing1(void){
     glPushMatrix();
-    //glScalef(0.3,0.0,0.5);
     glTranslatef(2.2,0.0,-1.0);
     glColor3f(0,0,1);
     glEnableClientState(GL_VERTEX_ARRAY);
@@ -60,7 +63,6 @@ void Nave::drawWing1(void){
 
 void Nave::drawWing2(void){
     glPushMatrix();
-    glScalef(0.3,0.0,0.5);
     glTranslatef(-2.2,0.0,-1.0);
     glColor3f(0,0,1);
     glEnableClientState(GL_VERTEX_ARRAY);
@@ -75,7 +77,6 @@ void Nave::drawContorno(void)
     glPushMatrix();
     glShadeModel(GL_SMOOTH);
     glPolygonMode(GL_FRONT_AND_BACK,GL_FILL);
-    //glScalef(5,5,5);
 	glTranslated(this->x,this->y,this->z);
     glRotatef(45,0.0f, 1.0f, 0.0f);
     glEnableClientState(GL_VERTEX_ARRAY);
