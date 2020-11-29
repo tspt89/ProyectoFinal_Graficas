@@ -21,8 +21,8 @@ Escenario::Escenario(float _l)
 	this->a[2] = new CuboTexturizado(0.5,t1,t2,t3);
 		this->a[2]->translate(15.0f,0,0);
 
-	this->a[3] = new Nave(10.0f);
-		this->a[3]->translate(15.0f,0,-5.0f);
+	this->a[3] = new Nave(7.0f);
+		this->a[3]->translate(15.0f,0,15.0f);
 
 
 	//Group 1
@@ -150,53 +150,35 @@ void Escenario::updatePlayerPerspective(){
 }
 
 void Escenario::update(float l){
-	//printf("Player - %3.2f, %3.2f, %3.2f\n",this->player->CENTER_X,this->player->CENTER_Y,this->player->CENTER_Z);
 	bool isColliding = false;
-	for(int i=0; i < tam-29; i++){
-		for(int j = 0; j < tam; j++){
-			if(i != j){
-				isColliding = c->isColliding(a[i]->x,a[i]->z,a[j]->x,a[j]->z,a[i]->getRadius());
-				//printf("Agente %d:%d\t -> %s\n",i,j,(isColliding)?"true":"false");
-				if(isColliding){
-					a[i]->changeDirection(l);
-				}
-			}
-		}
+	//Ciclo para actualizar y dibujar los agentes
+	for(int i=0; i < 4; i++){
 		a[i]->update(l);
 		a[i]->draw();
 	}
+
+	for(int i = 0; i < tam; i++){
+		for(int j=0; j < tam; j++){
+			if(i != j){
+				isColliding = c->isColliding(a[i]->x,a[i]->z,a[j]->x,a[j]->z,a[i]->getRadius());
+				if(isColliding){
+					printf("Changing direction... Collider active\n");
+					a[i]->changeDirection(l);
+					break;
+				}
+			}
+
+		}
+
+		if(isColliding) break;
+	}
+
 	wall->draw();
-	//a[3]->draw();
-	a[4]->draw();
-	a[5]->draw();
-	a[6]->draw();
-	a[7]->draw();
-	a[8]->draw();
-	a[9]->draw();
-	a[10]->draw();
-	a[11]->draw();
-    a[12]->draw();
-	a[13]->draw();
-    a[14]->draw();
-	a[15]->draw();
-    a[16]->draw();
-	a[17]->draw();
-	a[18]->draw();
-    a[19]->draw();
-	a[20]->draw();
-	a[21]->draw();
-	a[22]->draw();
-    a[23]->draw();
-	a[24]->draw();
-	a[25]->draw();
-	a[26]->draw();
-	a[27]->draw();
-	a[28]->draw();
-	a[29]->draw();
-    a[30]->draw();
-	a[31]->draw();
-	a[32]->draw();
-	//usleep(100000);
+
+	//Dibujar agentes tipo Mountains
+	for(int i=4; i < tam; i++){
+		a[i]->draw();
+	}
 
 }
 

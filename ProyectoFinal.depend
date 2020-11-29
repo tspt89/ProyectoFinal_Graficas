@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1606621908 source:d:\documentos\documents\graficas\proyectofinal\src\agente.cpp
+1606634158 source:d:\documentos\documents\graficas\proyectofinal\src\agente.cpp
 	"Agente.h"
 
 1606621070 d:\documentos\documents\graficas\proyectofinal\include\agente.h
@@ -931,7 +931,7 @@
 
 1526089820 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\pthread_unistd.h
 
-1606619152 source:d:\documentos\documents\graficas\proyectofinal\main.cpp
+1606634523 source:d:\documentos\documents\graficas\proyectofinal\main.cpp
 	<GLUT/glut.h>
 	<GL/glut.h>
 	<stdlib.h>
@@ -940,7 +940,7 @@
 	"Agente.h"
 	"Escenario.h"
 
-1606622735 source:d:\documentos\documents\graficas\proyectofinal\src\escenario.cpp
+1606634200 source:d:\documentos\documents\graficas\proyectofinal\src\escenario.cpp
 	"Escenario.h"
 	<stdio.h>
 
@@ -961,7 +961,7 @@
 	<math.h>
 	<GL/glut.h>
 
-1606621338 source:d:\documentos\documents\graficas\proyectofinal\src\collision.cpp
+1606634158 source:d:\documentos\documents\graficas\proyectofinal\src\collision.cpp
 	"Collision.h"
 
 1606621134 d:\documentos\documents\graficas\proyectofinal\include\collision.h
@@ -994,7 +994,7 @@
 	<GL/glut.h>
 	"RgbImage.h"
 
-1606621445 source:d:\documentos\documents\graficas\proyectofinal\src\walls.cpp
+1606634360 source:d:\documentos\documents\graficas\proyectofinal\src\walls.cpp
 	"Walls.h"
 
 1606621349 source:d:\documentos\documents\graficas\proyectofinal\src\cubotexturizado.cpp

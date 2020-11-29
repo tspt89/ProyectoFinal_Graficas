@@ -43,17 +43,17 @@ float Agente::getRadius(){
 void Agente::update(float l){
 	int lastC = this->c;
 	if(c == 0 || stepCounter == limitSteps){
-		//if(stepCounter == limitSteps)
-		//	printf("STEP COUNTER LIMIT IS REACHED\n");
+		if(stepCounter == limitSteps)
+			printf("STEP COUNTER LIMIT IS REACHED\n");
 		stepCounter = 0;
-		limitSteps = rand() % (int)(l/2) + 10;
+		limitSteps = rand() % 50;
 		//printf("LIMIT STEPS: %d\t\t",limitSteps);
 		this->c = rand() % 5;
 		if(lastC == c)
 			this->c = rand() % 5;
-		this->dx = static_cast <float> (rand()) / static_cast <float> (RAND_MAX);
-		this->dy = static_cast <float> (rand()) / static_cast <float> (RAND_MAX);
-		//printf("dX:%3.2f\tdy: %3.2f\tC = %d\n",this->dx,this->dy,this->c);
+		this->dx = static_cast <float> (rand()) / static_cast <float> (RAND_MAX) + 0.5f;
+		this->dy = static_cast <float> (rand()) / static_cast <float> (RAND_MAX) + 0.5f;
+		printf("dX:%3.2f\tdy: %3.2f\tC = %d\n",this->dx,this->dy,this->c);
 
 		//sleep(2);
 	} else if(c == 1){
@@ -76,12 +76,6 @@ void Agente::update(float l){
 
 void Agente::reset(float l){
 	if(x >= l || z >= l){
-		/*printf("Before %3.2f %3.2f\t\t",this->x,this->z);
-		float sign1 = pow(-1,rand()%10) * (rand() % (int)(l - 0.1*l));
-		float sign2 = pow(-1,rand()%10) * (rand() % (int)(l - 0.1*l));
-		this->translate(sign1,0,sign2);
-		printf("Update %3.2f %3.2f\n",this->x,this->z);*/
-		//printf("Enter if 1: + \tx= %3.2f z=%3.2f\n",x,z);
 		stepCounter = 0;
 		c = 2;
 
@@ -104,6 +98,6 @@ void Agente::changeDirection(float l){
 	if(lastC == c)
 		this->c = rand() % 5;
 
-	this->dx = static_cast <float> (rand()) / static_cast <float> (RAND_MAX);
-	this->dy = static_cast <float> (rand()) / static_cast <float> (RAND_MAX);
+	this->dx = static_cast <float> (rand()) / static_cast <float> (RAND_MAX) + 1.0f;
+	this->dy = static_cast <float> (rand()) / static_cast <float> (RAND_MAX) + 1.0f;
 }

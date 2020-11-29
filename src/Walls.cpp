@@ -40,7 +40,7 @@ void Walls::draw(){
     loadTextureFromFile( filename );
     glEnable(GL_TEXTURE_2D);
     glBindTexture(GL_TEXTURE_2D, texture[0]);
-    glColor3f(0.5f,0.2f,0.5f);
+    glColor3f(1,1,1);
 	glBegin(GL_QUADS);
 	glTexCoord2f(0.0, 0.0);
 	glVertex3f(-l,-2,l);
@@ -59,7 +59,7 @@ void Walls::draw(){
     glEnable(GL_TEXTURE_2D);
     glBindTexture(GL_TEXTURE_2D, texture[0]);
     glBegin(GL_QUADS);
-	glColor3f(0.5f,0.2f,0.5f);
+	glColor3f(1,1,1);
 	glTexCoord2f(0.0, 0.0);
 	glVertex3f(-l,-2,-l);
 	glTexCoord2f(0.0, 1.0);
@@ -77,7 +77,7 @@ void Walls::draw(){
     glEnable(GL_TEXTURE_2D);
     glBindTexture(GL_TEXTURE_2D, texture[0]);
 	glBegin(GL_QUADS);
-	glColor3f(0.5f,0.2f,0.5f);
+	glColor3f(1,1,1);
 	glTexCoord2f(0.0, 0.0);
 	glVertex3f(l,h,l);
 	glTexCoord2f(0.0, 1.0);
@@ -95,7 +95,7 @@ void Walls::draw(){
     glEnable(GL_TEXTURE_2D);
     glBindTexture(GL_TEXTURE_2D, texture[0]);
 	glBegin(GL_QUADS);
-	glColor3f(0.5f,0.2f,0.5f);
+	glColor3f(1,1,1);
 	glTexCoord2f(0.0, 0.0);
 	glVertex3f(-l,h,l);
 	glTexCoord2f(0.0, 1.0);
@@ -113,7 +113,7 @@ void Walls::draw(){
     glEnable(GL_TEXTURE_2D);
     glBindTexture(GL_TEXTURE_2D, texture[0]);
 	glBegin(GL_QUADS);
-	//glColor3f(0.65f,0.34f,0.34f);
+	glColor3f(0.65f,0.34f,0.34f);
 	glTexCoord2f(0.0, 0.0);
 	glVertex3f(l,-1,-l);
 	glTexCoord2f(0.0, 1.0);
