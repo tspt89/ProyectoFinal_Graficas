@@ -1,8 +1,8 @@
 # depslib dependency file v1.0
-1606508292 source:d:\documentos\documents\graficas\proyectofinal\src\agente.cpp
+1606621908 source:d:\documentos\documents\graficas\proyectofinal\src\agente.cpp
 	"Agente.h"
 
-1606507649 d:\documentos\documents\graficas\proyectofinal\include\agente.h
+1606621070 d:\documentos\documents\graficas\proyectofinal\include\agente.h
 	<GL/glut.h>
 	<math.h>
 	<stdio.h>
@@ -931,7 +931,7 @@
 
 1526089820 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\pthread_unistd.h
 
-1606490445 source:d:\documentos\documents\graficas\proyectofinal\main.cpp
+1606619152 source:d:\documentos\documents\graficas\proyectofinal\main.cpp
 	<GLUT/glut.h>
 	<GL/glut.h>
 	<stdlib.h>
@@ -940,11 +940,11 @@
 	"Agente.h"
 	"Escenario.h"
 
-1606594448 source:d:\documentos\documents\graficas\proyectofinal\src\escenario.cpp
+1606622735 source:d:\documentos\documents\graficas\proyectofinal\src\escenario.cpp
 	"Escenario.h"
 	<stdio.h>
 
-1606512747 d:\documentos\documents\graficas\proyectofinal\include\escenario.h
+1606621178 d:\documentos\documents\graficas\proyectofinal\include\escenario.h
 	"Player.h"
 	"Collision.h"
 	"Agente.h"
@@ -954,27 +954,28 @@
 	"Nave.h"
 	"Mountain.h"
 
-1606491081 source:d:\documentos\documents\graficas\proyectofinal\src\player.cpp
+1606621425 source:d:\documentos\documents\graficas\proyectofinal\src\player.cpp
 	"Player.h"
 
-1606491081 d:\documentos\documents\graficas\proyectofinal\include\player.h
+1606621250 d:\documentos\documents\graficas\proyectofinal\include\player.h
 	<math.h>
 	<GL/glut.h>
 
-1606510133 source:d:\documentos\documents\graficas\proyectofinal\src\collision.cpp
+1606621338 source:d:\documentos\documents\graficas\proyectofinal\src\collision.cpp
 	"Collision.h"
 
-1606420910 d:\documentos\documents\graficas\proyectofinal\include\collision.h
+1606621134 d:\documentos\documents\graficas\proyectofinal\include\collision.h
 	<stdio.h>
 	<math.h>
 	<unistd.h>
 
-1606237606 source:d:\documentos\documents\graficas\proyectofinal\src\rgbimage.cpp
+1606621530 source:d:\documentos\documents\graficas\proyectofinal\src\rgbimage.cpp
 	"RgbImage.h"
 	<windows.h>
 	"GL/gl.h"
+	<unistd.h>
 
-1606237596 d:\documentos\documents\graficas\proyectofinal\include\rgbimage.h
+1606621259 d:\documentos\documents\graficas\proyectofinal\include\rgbimage.h
 	<stdio.h>
 	<assert.h>
 
@@ -982,38 +983,38 @@
 	<crtdefs.h>
 	<stdlib.h>
 
-1606508360 source:d:\documentos\documents\graficas\proyectofinal\src\cara.cpp
+1606621320 source:d:\documentos\documents\graficas\proyectofinal\src\cara.cpp
 	"Cara.h"
 
-1606242625 d:\documentos\documents\graficas\proyectofinal\include\cara.h
+1606621154 d:\documentos\documents\graficas\proyectofinal\include\cara.h
 	"Agente.h"
 	<GL/glut.h>
 
-1606417518 d:\documentos\documents\graficas\proyectofinal\include\walls.h
+1606621270 d:\documentos\documents\graficas\proyectofinal\include\walls.h
 	<GL/glut.h>
 	"RgbImage.h"
 
-1606594542 source:d:\documentos\documents\graficas\proyectofinal\src\walls.cpp
+1606621445 source:d:\documentos\documents\graficas\proyectofinal\src\walls.cpp
 	"Walls.h"
 
-1606491004 source:d:\documentos\documents\graficas\proyectofinal\src\cubotexturizado.cpp
+1606621349 source:d:\documentos\documents\graficas\proyectofinal\src\cubotexturizado.cpp
 	"CuboTexturizado.h"
 
-1606446862 d:\documentos\documents\graficas\proyectofinal\include\cubotexturizado.h
+1606621168 d:\documentos\documents\graficas\proyectofinal\include\cubotexturizado.h
 	"Agente.h"
 	"RgbImage.h"
 	<GL/glut.h>
 
-1606512372 source:d:\documentos\documents\graficas\proyectofinal\src\nave.cpp
+1606622762 source:d:\documentos\documents\graficas\proyectofinal\src\nave.cpp
 	"Nave.h"
 
-1606509686 d:\documentos\documents\graficas\proyectofinal\include\nave.h
+1606621238 d:\documentos\documents\graficas\proyectofinal\include\nave.h
 	"Agente.h"
 
-1606594373 source:d:\documentos\documents\graficas\proyectofinal\src\mountain.cpp
+1606621871 source:d:\documentos\documents\graficas\proyectofinal\src\mountain.cpp
 	"Mountain.h"
 
-1606594407 d:\documentos\documents\graficas\proyectofinal\include\mountain.h
+1606621193 d:\documentos\documents\graficas\proyectofinal\include\mountain.h
 	"Agente.h"
 	"RgbImage.h"
 	<GL/glut.h>

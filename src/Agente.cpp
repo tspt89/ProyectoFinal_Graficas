@@ -93,7 +93,7 @@ void Agente::reset(float l){
 }
 
 void Agente::changeDirection(float l){
-	printf("-->-->-->\tChanging direction!!\n");
+	//printf("-->-->-->\tChanging direction!!\n");
 	int lastC = this->c;
 	if(stepCounter == limitSteps)
 		//printf("STEP COUNTER LIMIT IS REACHED\n");

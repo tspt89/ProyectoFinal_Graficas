@@ -24,6 +24,7 @@
 #ifndef RGBIMAGE_DONT_USE_OPENGL
 #include <windows.h>
 #include "GL/gl.h"
+#include <unistd.h>
 #endif
 #ifndef BI_RGB
 #define BI_RGB 0
@@ -64,6 +65,7 @@ bool RgbImage::LoadBmpFile( const char* filename )
 	FILE* infile = fopen( filename, "rb" );		// Open for reading binary data
 	if ( !infile ) {
 		fprintf(stderr, "No abre el archivo: %s\n", filename);
+		sleep(3);
 		ErrorCode = OpenError;
 		return false;
 	}

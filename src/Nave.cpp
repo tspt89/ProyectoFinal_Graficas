@@ -48,7 +48,7 @@ void Nave::draw(){
 
 void Nave::drawWing1(void){
     glPushMatrix();
-    glScalef(0.3,0.0,0.5);
+    //glScalef(0.3,0.0,0.5);
     glTranslatef(2.2,0.0,-1.0);
     glColor3f(0,0,1);
     glEnableClientState(GL_VERTEX_ARRAY);

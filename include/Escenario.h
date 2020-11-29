@@ -33,7 +33,7 @@ class Escenario
 	private:
 		Player *player;
 		Collision *c;
-		static const int tam = 4;
+		static const int tam = 33;
 		Agente *a[tam];
 		Walls *wall;
 		float l = 0.0f;

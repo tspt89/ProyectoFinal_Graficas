@@ -19,21 +19,21 @@ float vertexCoordsOjoI[18] = {
 	//Ojo izq 18
 	-1.8, 2.5, 0.1,    -1.2, 3.0, 0.3,  //p13, p14
 	-0.6, 2.5, 0.1,    -1.2, 2.0, 0.3,  //p15, p16
-	-1.2, 2.8, 0.5,    -1.2, 2.4, 0.5,  //p17, p18
+	-1.2, 2.8, 0.3,    -1.2, 2.4, 0.3,  //p17, p18
 };
 
 float vertexCoordsOjoD[18] = {
 	//Ojo der 18
 	 1.8, 2.5, 0.1,     1.2, 3.0, 0.3,
 	 0.6, 2.5, 0.1,     1.2, 2.0, 0.3,
-	 1.2, 2.8, 0.5,     1.2, 2.4, 0.5,
+	 1.2, 2.8, 0.3,     1.2, 2.4, 0.3,
 };
 
 float vertexCoordsNarz[18] = {
 	//Nariz
 	-0.6, 2.5, 0.1,      0.6, 2.5, 0.1,
-	-0.1, 1.5, 1.0,     -0.5, 0.8, 0.7,
-	 0.1, 1.5, 1.0,      0.5, 0.8, 0.7
+	-0.1, 1.5, 1.0,     -0.5, 0.8, 0.1,
+	 0.1, 1.5, 1.0,      0.5, 0.8, 0.1
 };
 
 float vertexColorsCont[24] = {
@@ -43,23 +43,23 @@ float vertexColorsCont[24] = {
 };
 
 float vertexColorsBoca[15] = {
-	1,1,1,   1,1,1,   1,1,1,   0,0,0,
+	1,0,0.2,   1,0,0.2,   1,0,0.2,   0,0,0,
 	0,0,0
 };
 
 float vertexColorsOjoI[18] = {
-	1,1,1,  1,1,1,  1,1,1,
-	1,1,1,  0,0,1,  0,0,1,
+	0,0.2,1,  0,0.2,1,  0,0,1,
+	0,0,1,  0,0,1,  0,0,1
 };
 
 float vertexColorsOjoD[18] = {
-	1,1,1,  1,1,1,  1,1,1,
-	1,1,1,  0,0,1,  0,0,1,
+	0,0.2,1,  0,0.2,1,  0,0,1,
+	0,0,1,  0,0,1,  0,0,1
 };
 
 float vertexColorsNarz[18] = {
-	0,0,0,  0,0,0,  0,0,0,
-	0,0,0,  0,0,0,  0,0,0,
+	0.1,0.1,0.1,  1.0,1.0,1.0,  0.1,0.1,0.1,
+	1.0,1.0,1.0,  0.1,0.1,0.1,  0.1,0.1,0.1,
 };
 
 int elementArrayCont[16] = {
@@ -87,7 +87,6 @@ int elementArrayNarz[10] = {
 	0,2,    2,3,    5,3,    5,4,    4,1
 };
 
-
 Cara::Cara() : Agente(3.0f)
 {
 	//ctor
@@ -100,6 +99,7 @@ Cara::~Cara()
 
 void Cara::drawNarz(void){
     glPushMatrix();
+    glShadeModel(GL_SMOOTH);
     glEnableClientState(GL_VERTEX_ARRAY);
     glEnableClientState(GL_COLOR_ARRAY);
 
@@ -107,7 +107,7 @@ void Cara::drawNarz(void){
     glColorPointer(3, GL_FLOAT, 0, vertexColorsNarz);
 
 
-    glDrawElements(GL_LINES,10,GL_UNSIGNED_INT,elementArrayNarz);
+    glDrawElements(GL_POLYGON,10,GL_UNSIGNED_INT,elementArrayNarz);
     glDisableClientState(GL_VERTEX_ARRAY);
     glDisableClientState(GL_COLOR_ARRAY);
     glPopMatrix();
@@ -115,6 +115,7 @@ void Cara::drawNarz(void){
 
 void Cara::drawOjoD(void){
     glPushMatrix();
+    glShadeModel(GL_SMOOTH);
     glEnableClientState(GL_VERTEX_ARRAY);
     glEnableClientState(GL_COLOR_ARRAY);
 
@@ -129,6 +130,7 @@ void Cara::drawOjoD(void){
 
 void Cara::drawOjoI(void){
     glPushMatrix();
+    glShadeModel(GL_SMOOTH);
     glEnableClientState(GL_VERTEX_ARRAY);
     glEnableClientState(GL_COLOR_ARRAY);
 
@@ -144,6 +146,7 @@ void Cara::drawOjoI(void){
 void Cara::drawBoca(void)
 {
     glPushMatrix();
+    glShadeModel(GL_SMOOTH);
     glEnableClientState(GL_VERTEX_ARRAY);
     glEnableClientState(GL_COLOR_ARRAY);
 

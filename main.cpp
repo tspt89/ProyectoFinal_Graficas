@@ -223,7 +223,7 @@ void init()
 
 
 
-int checkCollisions(){
+/*int checkCollisions(){
 	int col = 1;
 	if(c1.getDistance(CENTER_X,CENTER_Y,CENTER_Z) == 0){
 		printf("Chocando objeto1!!\n");
@@ -247,7 +247,7 @@ int checkCollisions(){
 	EYE_Z= (EYE_Z <= -l) ? -l+0.1f : EYE_Z;
 	return col;
 
-}
+}*/
 
 
 void SpecialInput(int key, int x, int y)
