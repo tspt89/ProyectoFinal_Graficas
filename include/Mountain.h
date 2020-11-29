@@ -10,17 +10,21 @@
 class Mountain: public Agente
 {
 	public:
+		//Constructor que recibe la base, la altura, y el archivo de la textura
 		Mountain(float, float, char *);
 		virtual ~Mountain();
 		float base, height;
 
+		//Funciones para graficarlo y actualizar las variables de control en caso de ser necesario
 		void draw();
 		void update(float);
 	protected:
 
 	private:
+		//Funcion para cargar la textura desde un archivo
 	    void loadTextureFromFile(char *);
-		char *texture_1,*texture_2,*texture_3;
+		//Nombre del archivo de la textura
+		char *texture_1;
 		GLUquadric *quad;
 		GLuint	texture[NTextures];
 };

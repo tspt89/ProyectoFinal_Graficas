@@ -1,5 +1,6 @@
 #include "Mountain.h"
 
+//Constructor que recibe la base, la altura, y el archivo de la textura
 Mountain::Mountain(float base, float height,  char * text) : Agente(base)
 {
 	this->base = base;
@@ -12,6 +13,7 @@ Mountain::~Mountain()
 	//dtor
 }
 
+//Funcion para cargar la textura desde un archivo
 void Mountain::loadTextureFromFile(char *filename)
 {
 	glClearColor (0.0, 0.0, 0.0, 0.0);
@@ -35,14 +37,14 @@ void Mountain::loadTextureFromFile(char *filename)
     theTexMap.Reset();
 }
 
+
+//Funciones para graficarlo y actualizar las variables de control en caso de ser necesario
 void Mountain::draw(){
 
 	glPushMatrix();
 		glColor3f(0.5f,0.5f,0.5f);
-		//printf("MOUNTAIN: ( %3.2f, %3.2f, %3.2f)\n",this->x,this->y,this->z);
         glTranslated(this->x,-1.0f + this->y,this->z);
         glRotated(90, -1.0, 0.0, 0.0);
-        //glutSolidCone(this->base, this->height, 50, 50);
         quad = gluNewQuadric();
         glEnable(GL_TEXTURE_2D);
         loadTextureFromFile( this->texture_1 );
