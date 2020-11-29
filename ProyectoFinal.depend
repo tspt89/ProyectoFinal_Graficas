@@ -961,10 +961,10 @@
 	<math.h>
 	<GL/glut.h>
 
-1606634158 source:d:\documentos\documents\graficas\proyectofinal\src\collision.cpp
+1606676629 source:d:\documentos\documents\graficas\proyectofinal\src\collision.cpp
 	"Collision.h"
 
-1606621134 d:\documentos\documents\graficas\proyectofinal\include\collision.h
+1606676658 d:\documentos\documents\graficas\proyectofinal\include\collision.h
 	<stdio.h>
 	<math.h>
 	<unistd.h>
@@ -983,7 +983,7 @@
 	<crtdefs.h>
 	<stdlib.h>
 
-1606621320 source:d:\documentos\documents\graficas\proyectofinal\src\cara.cpp
+1606665092 source:d:\documentos\documents\graficas\proyectofinal\src\cara.cpp
 	"Cara.h"
 
 1606665092 d:\documentos\documents\graficas\proyectofinal\include\cara.h
