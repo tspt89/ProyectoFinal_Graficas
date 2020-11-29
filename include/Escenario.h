@@ -19,12 +19,15 @@ class Escenario
 		//Escenario Funcions
 		void update(float);
 
+
 		//Player Functions
-		void playerUp();
-		void playerDown();
-		void playerLeft();
-		void playerRight();
-		void updatePlayerPerspective();
+		void playerUp(); //Funcion para determinar si el usuario puede avanzar
+
+		void playerDown(); //Funcion para determinar si el usuario puede retroceder
+
+		void playerLeft();//Funcion para girar hacia la izquierda
+		void playerRight();//Funcion para girar hacia la derecha
+		void updatePlayerPerspective(); //Funcion para actualizar la perspectiva del jugador
 
 		//Collision Functions
 		bool checkCollisions();
@@ -33,9 +36,9 @@ class Escenario
 	private:
 		Player *player;
 		Collision *c;
-		static const int tam = 33;
-		Agente *a[tam];
-		Walls *wall;
+		static const int tam = 33; //Tamanio del arreglo de agentes
+		Agente *a[tam]; //Arreglo de agentes
+		Walls *wall; //Objeto de paredes para establecer el limite grafico del escenario
 		float l = 0.0f;
 
 };

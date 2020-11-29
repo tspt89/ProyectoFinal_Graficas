@@ -8,10 +8,13 @@ Escenario::Escenario(float _l)
 	char * tM = "mountain.bmp";
 	char * tM2= "mountain2.bmp";
 
+	//Se define el tamanio del escenario
 	this->l = _l;
 
+	//Declaracion del observador/usuario
 	this->player = new Player();
 
+	//Declaracion de Agentes en movimiento
 	this->a[0] = new Cara();
 		this->a[0]->translate(2.0f,0,0);
 
@@ -24,7 +27,7 @@ Escenario::Escenario(float _l)
 	this->a[3] = new Nave(7.0f);
 		this->a[3]->translate(15.0f,0,15.0f);
 
-
+	//Declaracion de Agentes estaticos dentro del escenario
 	//Group 1
 	this->a[4] = new Mountain(2.0f,5.0f,tM);
 	this->a[4]->translate(20.0f,0.0f,0.0f);
@@ -117,6 +120,7 @@ Escenario::Escenario(float _l)
 	this->a[32] = new Mountain(1.5f,4.0f,tM2);
 	this->a[32]->translate(9.0f,0.0f,24.0f);
 
+	//Declaracion de las paredes con el largo que se puede obtener.
 	this->wall = new Walls(_l);
 }
 
@@ -125,30 +129,33 @@ Escenario::~Escenario()
 	//dtor
 }
 
+//Funcion para determinar si el usuario puede avanzar
 void Escenario::playerUp(){
-	if(!checkCollisions()){
+	if(!checkCollisions()){ //En caso de que el usuario no este chocando, puede avanzar
 		this->player->up();
 	}
 }
 
+//Funcion para determinar si el usuario puede retroceder
 void Escenario::playerDown(){
-	if(!checkCollisions()){
+	if(!checkCollisions()){ //En caso de que el usuario no este chocando, puede retroceder
 		this->player->down();
 	}
 }
 
-void Escenario::playerLeft(){
+void Escenario::playerLeft(){ //Funcion para girar hacia la izquierda
 	this->player->left();
 }
 
-void Escenario::playerRight(){
+void Escenario::playerRight(){ //Funcion para girar hacia la derecha
 	this->player->right();
 }
 
-void Escenario::updatePlayerPerspective(){
+void Escenario::updatePlayerPerspective(){ //Funcion para actualizar la perspectiva del jugador
 	this->player->updatePerspective();
 }
 
+//Funcion para actualizar el escenario y los agentes
 void Escenario::update(float l){
 	bool isColliding = false;
 	//Ciclo para actualizar y dibujar los agentes
@@ -157,23 +164,27 @@ void Escenario::update(float l){
 		a[i]->draw();
 	}
 
-	for(int i = 0; i < tam; i++){
+
+	//Ciclo para los agentes en movimiento, si colisionan con cualquier otro agente, puedan cambiar de direccion.
+	//Para que no se queden colisionando por siempre.
+	for(int i = 0; i < 4; i++){
 		for(int j=0; j < tam; j++){
-			if(i != j){
+			if(i != j){ //Siempre y cuando no sean los mismos agentes
 				isColliding = c->isColliding(a[i]->x,a[i]->z,a[j]->x,a[j]->z,a[i]->getRadius());
-				if(isColliding){
+
+				if(isColliding){ //Si se encuentran en colision, cambian de direccion
 					printf("Changing direction... Collider active\n");
 					a[i]->changeDirection(l);
-					break;
+					break; //se rompe ciclo
 				}
 			}
 
 		}
 
-		if(isColliding) break;
+		if(isColliding) break; //Se rompe ciclo
 	}
 
-	wall->draw();
+	wall->draw(); //Se dibujan las paredes
 
 	//Dibujar agentes tipo Mountains
 	for(int i=4; i < tam; i++){
@@ -182,27 +193,22 @@ void Escenario::update(float l){
 
 }
 
+//Funcion para checar si el agente se encuentra chocando con algun agente, retorna true en ser asi.
+//Y en caso de false, el usuario pueda moverse en el escenario
 bool Escenario::checkCollisions(){
-	//float player[3], agent[3];
-	//printf("Tam: %d -PLAYER: %3.2f, %3.2f, %3.2f\t\tObject: %3.2f, %3.2f, %3.2f\n",tam,player->CENTER_X, player->CENTER_Y,player->CENTER_Z,a[0]->x,a[0]->y,a[0]->z);
 	bool isColliding = false;
+
+	//Ciclo para recorrer todos los agentes declarados y checar si se encuentra en colision con alguno.
 	for(int i=0; i < tam; i++){
-		//printf("Agente %d\t\:",i);
-		//----------COMENTAR / DESCOMENTAR PARA LAS COLISIONES-----//
 		isColliding = c->isColliding(player->CENTER_X,player->CENTER_Z,a[i]->x,a[i]->z,a[i]->getRadius());
-		//int rad = a[i]->getDistance(player->CENTER_X,player->CENTER_Y,player->CENTER_Z);
+		//Si se encuentra en colision, inmediatamente se rompe el ciclo para indicar que si hay una colision
 		if(isColliding)
 			break;
 	}
-	//isColliding = c->isColliding(player->CENTER_X,player->CENTER_Z,a[2]->x,a[2]->z,a[2]->getRadius());
 
-	//printf("EYE X: %3.2f, %3.2f, %3.2f\n",player->EYE_X,player->EYE_Y,player->EYE_Z);
-
-	//----------COMENTAR / DESCOMENTAR PARA LAS COLISIONES-----//
+	//En caso de que el usuario no pueda salir del escenario.
 	c->isCollidingWall(&player->EYE_X,&player->EYE_Y,&player->EYE_Z,this->l);
-	this->updatePlayerPerspective();
-	//printf("AFTER X: %3.2f, %3.2f, %3.2f\n",player->EYE_X,player->EYE_Y,player->EYE_Z);
-	//usleep(750000);
-	//printf("Object is colliding: %s\n",(isColliding)?"true":"false");
+
+	//Se devuelve el ultimo valor que se le asigno al booleano, para determinar si el usuario puede avanzar
 	return isColliding;
 }

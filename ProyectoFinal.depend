@@ -940,11 +940,11 @@
 	"Agente.h"
 	"Escenario.h"
 
-1606634200 source:d:\documentos\documents\graficas\proyectofinal\src\escenario.cpp
+1606677884 source:d:\documentos\documents\graficas\proyectofinal\src\escenario.cpp
 	"Escenario.h"
 	<stdio.h>
 
-1606621178 d:\documentos\documents\graficas\proyectofinal\include\escenario.h
+1606678069 d:\documentos\documents\graficas\proyectofinal\include\escenario.h
 	"Player.h"
 	"Collision.h"
 	"Agente.h"
@@ -983,7 +983,7 @@
 	<crtdefs.h>
 	<stdlib.h>
 
-1606665092 source:d:\documentos\documents\graficas\proyectofinal\src\cara.cpp
+1606676996 source:d:\documentos\documents\graficas\proyectofinal\src\cara.cpp
 	"Cara.h"
 
 1606665092 d:\documentos\documents\graficas\proyectofinal\include\cara.h
@@ -997,7 +997,7 @@
 1606634360 source:d:\documentos\documents\graficas\proyectofinal\src\walls.cpp
 	"Walls.h"
 
-1606621349 source:d:\documentos\documents\graficas\proyectofinal\src\cubotexturizado.cpp
+1606676996 source:d:\documentos\documents\graficas\proyectofinal\src\cubotexturizado.cpp
 	"CuboTexturizado.h"
 
 1606676996 d:\documentos\documents\graficas\proyectofinal\include\cubotexturizado.h
