@@ -11,6 +11,8 @@
 class CuboTexturizado: public Agente
 {
 	public:
+		//Constructor que recibe como parametros el tamanio del cubo, y tres texturas para su dibujado. El tamanio del cubo
+		//se manda a la clase padre Agente por medio de su constructor para su futuro uso del colisionador.
 		CuboTexturizado(float, char *, char *, char *);
 		virtual ~CuboTexturizado();
 

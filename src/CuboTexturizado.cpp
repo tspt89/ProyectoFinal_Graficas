@@ -1,5 +1,7 @@
 #include "CuboTexturizado.h"
 
+//Constructor que recibe como parametros el tamanio del cubo, y tres texturas para su dibujado. El tamanio del cubo
+//se manda a la clase padre Agente por medio de su constructor para su futuro uso del colisionador.
 CuboTexturizado::CuboTexturizado(float _l, char * text1, char * text2, char * text3) : Agente(_l)
 {
 	this->texture_1 = text1;
@@ -12,6 +14,7 @@ CuboTexturizado::~CuboTexturizado()
 	//dtor
 }
 
+//Funcion para cargar la textura del archivo
 void CuboTexturizado::loadTextureFromFile(char *filename)
 {
 	glClearColor (0.0, 0.0, 0.0, 0.0);
@@ -35,10 +38,9 @@ void CuboTexturizado::loadTextureFromFile(char *filename)
     theTexMap.Reset();
 }
 
+//Funcion para cargar el cubo junto con sus texturas
 void CuboTexturizado::draw(){
-	//glColor3f(1.0f, 0.0f, 0.0f);
-    //glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    //filename = "textura4.bmp";
+
     loadTextureFromFile( this->texture_1 );
     glEnable(GL_TEXTURE_2D);
     glBindTexture(GL_TEXTURE_2D, texture[0]);
@@ -54,9 +56,7 @@ void CuboTexturizado::draw(){
     glEnd();
     glDisable(GL_TEXTURE_2D);
 
-    //filename = "textura2.bmp";
     loadTextureFromFile( this->texture_2 );
-    //glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glEnable(GL_TEXTURE_2D);
     glBindTexture(GL_TEXTURE_2D, texture[0]);
     glBegin(GL_QUADS);  //cara trasera
@@ -69,7 +69,6 @@ void CuboTexturizado::draw(){
     glTexCoord2f(1.0, 0.0);
     glVertex3f( size + x,  size + y, -size + z);
     glEnd();
-    //glFlush();
     glDisable(GL_TEXTURE_2D);
 
     glColor3f(0.0f, 0.0f, 1.0f);
@@ -92,7 +91,6 @@ void CuboTexturizado::draw(){
     loadTextureFromFile( this->texture_3 );
     glEnable(GL_TEXTURE_2D);
     glBindTexture(GL_TEXTURE_2D, texture[0]);
-    //glColor3f(0.0f, 1.0f, 1.0f);
     glBegin(GL_QUADS);  //cara arriba
     glTexCoord2f(0.0, 0.0);
     glVertex3f(-size + x,  size + y,  size + z);
@@ -114,6 +112,8 @@ void CuboTexturizado::draw(){
     glEnd();
 }
 
+//Funcion para actualizar variables de control
 void CuboTexturizado::update(float l){
+	//Dichas variables se actualizan en la clase padre.
 	this->Agente::update(l);
 }

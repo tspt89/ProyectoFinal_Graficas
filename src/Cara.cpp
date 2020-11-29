@@ -163,7 +163,6 @@ void Cara::drawContorno(void)
 {
     glPushMatrix();
     glTranslated(this->x,0,this->z);
-    //glRotatef(45, 0.0f, 1.0f, 0.0f);//Endereza
     glRotatef(-40, 1.0f, 0.0f, 0.0f);
 
     glEnableClientState(GL_VERTEX_ARRAY);
@@ -182,6 +181,7 @@ void Cara::drawContorno(void)
 }
 
 void Cara::update(float l){
+
 	this->Agente::update(l);
 }
 
