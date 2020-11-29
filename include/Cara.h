@@ -15,6 +15,7 @@ class Cara: public Agente
 	protected:
 
 	private:
+		//Funciones para el dibujo del objeto
 		void drawContorno();
 		void drawBoca();
 		void drawOjoI();
