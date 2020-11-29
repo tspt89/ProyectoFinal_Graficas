@@ -1,3 +1,12 @@
+/*
+*	Proyecto Final de Graficas Computacionales
+*	Profesor: Dr. Ivan Olmos Pineda
+*	Integrantes:
+*		Israel Garcia Cavazos - A01329888
+*		Theo Salvador Perez Tovar - A01328274
+*	Periodo: Agosto-Diciembre 2020
+*/
+
 #include "Mountain.h"
 
 //Constructor que recibe la base, la altura, y el archivo de la textura

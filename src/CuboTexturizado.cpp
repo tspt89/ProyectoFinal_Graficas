@@ -1,3 +1,12 @@
+/*
+*	Proyecto Final de Graficas Computacionales
+*	Profesor: Dr. Ivan Olmos Pineda
+*	Integrantes:
+*		Israel Garcia Cavazos - A01329888
+*		Theo Salvador Perez Tovar - A01328274
+*	Periodo: Agosto-Diciembre 2020
+*/
+
 #include "CuboTexturizado.h"
 
 //Constructor que recibe como parametros el tamanio del cubo, y tres texturas para su dibujado. El tamanio del cubo

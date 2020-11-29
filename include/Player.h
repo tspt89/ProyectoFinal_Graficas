@@ -1,3 +1,12 @@
+/*
+*	Proyecto Final de Graficas Computacionales
+*	Profesor: Dr. Ivan Olmos Pineda
+*	Integrantes:
+*		Israel Garcia Cavazos - A01329888
+*		Theo Salvador Perez Tovar - A01328274
+*	Periodo: Agosto-Diciembre 2020
+*/
+
 #ifndef PLAYER_H
 #define PLAYER_H
 
@@ -8,6 +17,8 @@ class Player
 	public:
 		Player();
 		virtual ~Player();
+
+		//Variables de control del usuario
 		float EYE_X=0.0;
 		float EYE_Y=1.0;
 		float EYE_Z=0.0;
@@ -15,6 +26,7 @@ class Player
 		float CENTER_Y=0;
 		float CENTER_Z=0;
 
+		//Funciones para moverse en el entorno grafico
 		void up();
 		void down();
 		void left();

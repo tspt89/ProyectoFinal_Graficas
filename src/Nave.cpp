@@ -1,3 +1,12 @@
+/*
+*	Proyecto Final de Graficas Computacionales
+*	Profesor: Dr. Ivan Olmos Pineda
+*	Integrantes:
+*		Israel Garcia Cavazos - A01329888
+*		Theo Salvador Perez Tovar - A01328274
+*	Periodo: Agosto-Diciembre 2020
+*/
+
 #include "Nave.h"
 
 //Vertices de la Nave
