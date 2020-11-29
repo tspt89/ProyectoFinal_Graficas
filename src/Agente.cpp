@@ -1,5 +1,6 @@
 #include "Agente.h"
 
+//Constructor
 Agente::Agente(float s)
 {
 	this->size = s;
@@ -12,6 +13,7 @@ Agente::~Agente()
 	//dtor
 }
 
+//Funcion para dibujar el objeto
 void Agente::draw(){
 	glPushMatrix();
 	glRotatef(Theta,0,1,0);
@@ -21,13 +23,7 @@ void Agente::draw(){
     glPopMatrix();
 }
 
-int Agente::getDistance(float x, float y, float z){
-	float distance = sqrt(pow((x-this->x),2) + pow((z-this->z),2));
-	printf("RADIUS AGENTE: %f (r = %f)\tX: %3.2f\tY: %3.2f\tZ: %3.2f\tDistance:%3.2f\n",this->radius,size,x,y,z,distance);
-	printf("AGENTE: %3.2f, %3.2f, %3.2f - Theta: %3.2f\n",this->x,this->y,this->z,this->Theta);
-	return (distance <= this->radius) ? 0 : 1;
-}
-
+//Funcion para transladar al objeto a ciertas coordenadas
 void Agente::translate(float _x, float _y, float _z){
 	this->x = _x;
 	this->y = _y;
@@ -35,69 +31,64 @@ void Agente::translate(float _x, float _y, float _z){
 }
 
 
-
+//Obtencion del radio
 float Agente::getRadius(){
 	return this->radius;
 }
 
+//Actualizacion de la posicion del agente
 void Agente::update(float l){
-	int lastC = this->c;
-	if(c == 0 || stepCounter == limitSteps){
-		if(stepCounter == limitSteps)
-			printf("STEP COUNTER LIMIT IS REACHED\n");
-		stepCounter = 0;
-		limitSteps = rand() % 50;
-		//printf("LIMIT STEPS: %d\t\t",limitSteps);
-		this->c = rand() % 5;
-		if(lastC == c)
-			this->c = rand() % 5;
-		this->dx = static_cast <float> (rand()) / static_cast <float> (RAND_MAX) + 0.5f;
-		this->dy = static_cast <float> (rand()) / static_cast <float> (RAND_MAX) + 0.5f;
-		printf("dX:%3.2f\tdy: %3.2f\tC = %d\n",this->dx,this->dy,this->c);
+	int lastC = this->c; //Se guarda en temporal la ultima asignacion
 
-		//sleep(2);
-	} else if(c == 1){
+	if(c == 0 || stepCounter == limitSteps){ //Si cambia de pasos o llega a colisionar, cambia de comportamiento
+		stepCounter = 0; //Reinicio de pasos
+		limitSteps = rand() % 50; //Numero random hasta 50 para definir max cant de pasos
+		this->c = rand() % 5; //Asignacion random para obtener el comportamiento
+		if(lastC == c) //Si el actual comportamiento es igual al anterior, se repite la asignacion
+			this->c = rand() % 5;
+		this->dx = static_cast <float> (rand()) / static_cast <float> (RAND_MAX) + 0.5f; //Random float para determinar cuanto avanzar o retroceder en X
+		this->dz = static_cast <float> (rand()) / static_cast <float> (RAND_MAX) + 0.5f; //Random float para determinar cuanto avanzar o retroceder en Z
+
+	} else if(c == 1){ // Opcion 1
 		this->x += this->dx;
 		this->z += this->dz;
-	} else if(c == 2){
+	} else if(c == 2){ // Opcion 2
 		this->x -= this->dx;
 		this->z -= this->dz;
-	}  else if(c == 3){
+	} else if(c == 3){ // Opcion 3
 		this->x += this->dx;
 		this->z -= this->dz;
-	} else if(c == 4){
+	} else if(c == 4){ // Opcion 4
 		this->x -= this->dx;
 		this->z += this->dz;
 	}
 
-	stepCounter++;
-	reset(l);
+	stepCounter++; //Se agrega un paso
+	reset(l); //Si es necesario (colision con pared), se cambia la direccion del objeto
 }
 
+//Funcion para determinar si continua o cambia de direccion al encontrarse con una pared el objeto
 void Agente::reset(float l){
 	if(x >= l || z >= l){
 		stepCounter = 0;
 		c = 2;
 
 	} else if(x <= -l || z <= -l){
-		//printf("Enter if 2: - \tx= %3.2f z=%3.2f\n",x,z);
 		stepCounter = 0;
 		c = 1;
 	}
 }
 
 void Agente::changeDirection(float l){
-	//printf("-->-->-->\tChanging direction!!\n");
-	int lastC = this->c;
-	if(stepCounter == limitSteps)
-		//printf("STEP COUNTER LIMIT IS REACHED\n");
-	stepCounter = 0;
-	limitSteps = rand() % (int)(l/2) + 10;
-	//printf("LIMIT STEPS: %d\t\t",limitSteps);
-	this->c = rand() % 5;
-	if(lastC == c)
+	int lastC = this->c; //Se guarda estado previo
+
+	stepCounter = 0; //Se quita la cantidad de pasos
+	limitSteps = rand() % (int)(l/2) + 10; //Random para determinar el limite de pasos
+	this->c = rand() % 5; //Se determina el comportamiento del objeto
+
+	if(lastC == c) //Si el anterior es igual al nuevo comportamiento, se intenta de nuevo
 		this->c = rand() % 5;
 
-	this->dx = static_cast <float> (rand()) / static_cast <float> (RAND_MAX) + 1.0f;
-	this->dy = static_cast <float> (rand()) / static_cast <float> (RAND_MAX) + 1.0f;
+	this->dx = static_cast <float> (rand()) / static_cast <float> (RAND_MAX); //Random float para determinar cuanto avanzar o retroceder en X
+	this->dz = static_cast <float> (rand()) / static_cast <float> (RAND_MAX); //Random float para determinar cuanto avanzar o retroceder en Z
 }
